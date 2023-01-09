@@ -25,6 +25,15 @@ const tecladoReiniciar = Markup.keyboard([
     ['/start']
 ]).resize().extra()
 
+//Pode ser personalizado
+const tecladoCodigo = Markup.keyboard([
+    ['SANB3', 'BBAS3', 'ITSA4', 'B3SA3'],
+    ['AESB3', 'TRPL4', 'CPLE6', 'CPFE3'],
+    ['NEOE3', 'ENBR3', 'TAEE11', 'EGIE3'],
+    ['BBSE3', 'PSSA3', 'CXSE3','VIVT3'],
+    ['RANI3', 'KLBN4']
+]).resize().extra()
+
 bot.start(async ctx => {
     const nome = ctx.update.message.from.first_name
     await ctx.replyWithMarkdown(`Olá, ${nome}!`)
@@ -44,7 +53,7 @@ bot.hears('Ações', ctx => {
 })
 
 bot.hears('Consultar ações!', ctx => {
-    ctx.replyWithMarkdown('Qual ação deseja consultar?');
+    ctx.replyWithMarkdown('Qual ação deseja consultar?', tecladoCodigo);
     bot.on("text", async (ctx) => {
         var url_da_api = "https://brapi.dev/api/quote/";
         var acao = ctx.update.message.text;
@@ -65,7 +74,7 @@ bot.hears('Consultar ações!', ctx => {
 
 
 bot.hears('Consultar outra ação!', ctx => {
-    ctx.replyWithMarkdown('Qual ação deseja consultar?');
+    ctx.replyWithMarkdown(`Qual ação deseja consultar?`, tecladoCodigo);
     bot.on("text", async (ctx) => {
         var url_da_api = "https://brapi.dev/api/quote/";
         var acao = ctx.update.message.text;
