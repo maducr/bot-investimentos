@@ -27,11 +27,12 @@ const tecladoReiniciar = Markup.keyboard([
 
 //Pode ser personalizado
 const tecladoCodigo = Markup.keyboard([
-    ['SANB3', 'BBAS3', 'ITSA4', 'B3SA3'],
-    ['AESB3', 'TRPL4', 'CPLE6', 'CPFE3'],
-    ['NEOE3', 'ENBR3', 'TAEE11', 'EGIE3'],
-    ['BBSE3', 'PSSA3', 'CXSE3','VIVT3'],
-    ['RANI3', 'KLBN4']
+    ['SANB3', 'BBAS3', 'RANI3', 'KLBN4','VIVT3'],
+    ['BBSE3', 'PSSA3', 'CXSE3', 'ITSA4'],         
+    ['ALUP11', 'TAEE11','TRPL4'],
+    ['AESB3', 'EGIE3', 'CPFE3', 'ENBR3'],
+    ['B3SA3', 'LEVE3', 'FESA4','ROMI3'],
+    ['UNIP6', 'GRND3','HYPE3', 'CGAS5','MDIA3' ]
 ]).resize().extra()
 
 bot.start(async ctx => {
